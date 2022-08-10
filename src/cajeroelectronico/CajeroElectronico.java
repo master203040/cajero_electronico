@@ -17,14 +17,14 @@ public class CajeroElectronico {
         
         
         opcion = Integer.parseInt(JOptionPane.showInputDialog("Bienvenido al Cajero Electronico de Bancolombia" +
-            "\n1: Ingresar dinero a la Cuenta \n 2:Retirar Dinero de la Cuenta \n3: Salir"));
+            "\n1:Ingresar dinero a la Cuenta \n2:Retirar Dinero de la Cuenta \n3:Salir"));
         
         
         switch(opcion){
         
             case 1: ingresar= Float.parseFloat(JOptionPane.showInputDialog("digite la cantidad de dinero que desea ingresar en la cuenta"));
             saldoactual=saldo_inicial + ingresar;
-                JOptionPane.showInputDialog(null, "dinero en la cuenta "+saldoactual);
+                JOptionPane.showMessageDialog(null, "dinero en la cuenta "+saldoactual);
             break;
             
             case 2:retiro = Float.parseFloat(JOptionPane.showInputDialog("digitela cantidad de dinero que desea retirar"));
@@ -37,7 +37,7 @@ public class CajeroElectronico {
                     
                     saldoactual = saldo_inicial-retiro;
                     JOptionPane.showMessageDialog(null, "su saldo es: " +saldoactual);
-                
+      
                 }
                 
             break;
@@ -45,7 +45,13 @@ public class CajeroElectronico {
             case 3:
                 default:JOptionPane.showMessageDialog(null,"se equivoco de opcion");
             
+            break;
             
+            
+            case 4:
+               // default:JOptionPane.showMessageDialog(null,"Desea Volver al Menu?");
+            
+            break;
         }  
                 
     }
