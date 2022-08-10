@@ -16,8 +16,8 @@ public class CajeroElectronico {
         float retiro;
         
         
-        opcion = Integer.parseInt(JOptionPane.showInputDialog("bienvenido al cajero electronico de bancolombia" +
-                "1: ingresar dinero a la cuenta \n 2:retirar dinero de la cuenta \n3: salir"));
+        opcion = Integer.parseInt(JOptionPane.showInputDialog("Bienvenido al Cajero Electronico de Bancolombia" +
+            "\n1: Ingresar dinero a la Cuenta \n 2:Retirar Dinero de la Cuenta \n3: Salir"));
         
         
         switch(opcion){
@@ -27,22 +27,23 @@ public class CajeroElectronico {
                 JOptionPane.showInputDialog(null, "dinero en la cuenta "+saldoactual);
             break;
             
-            case 2:retiro= Float.parseFloat("digitela cantidad de dinero que desea retirar");
+            case 2:retiro = Float.parseFloat(JOptionPane.showInputDialog("digitela cantidad de dinero que desea retirar"));
             
                 if(retiro>saldo_inicial){
                 
-                    JOptionPane.showInputDialog(null,"no cuenta con el dinero suficiente para el retiro");
+                    JOptionPane.showMessageDialog(null,"no cuenta con el dinero suficiente para el retiro");
                         
                 }else{
-                    saldoactual= saldo_inicial - retiro;
-                    JOptionPane.showInputDialog(null, "su salro es: " +saldoactual);
+                    
+                    saldoactual = saldo_inicial-retiro;
+                    JOptionPane.showMessageDialog(null, "su saldo es: " +saldoactual);
                 
                 }
                 
             break;
             
             case 3:
-                default:JOptionPane.showConfirmDialog(null,"se equivoco de opcion");
+                default:JOptionPane.showMessageDialog(null,"se equivoco de opcion");
             
             
         }  
